@@ -1,0 +1,765 @@
+:root {
+  --main-color: #cbfe1c;
+  --section-padding: 80px;
+  --text-color: #f1f1f1;
+  --second-text-color: #b8bcc2;
+  --main-transtion: 0.4s;
+  --bg-section: #0b0e13;
+}
+
+section {
+  background-color: var(--bg-section);
+  padding: var(--section-padding);
+}
+
+.main-color {
+  color: var(--main-color);
+}
+.navbar .nav-link.active {
+  color: #cbfe1c !important;
+}
+header {
+  min-height: 100vh;
+  background-image:
+    linear-gradient(rgba(0, 0, 0, 0.75)), url(../images/hero-bg.jpg);
+  background-position: center;
+  background-size: cover;
+}
+header h2 {
+  font-family: "Days One", sans-serif;
+  font-size: 60px;
+  font-weight: 700;
+  line-height: 75px;
+  color: #f1f1f1;
+}
+header img {
+  border: #cbfe1c solid 3px;
+  border-radius: 15px;
+}
+.gaming-btn {
+  background-color: var(--main-color);
+  border-radius: 10px;
+  background: linear-gradient(90deg, #a4d900, #c5f500, #a4d900);
+  background-size: 200% 100%;
+  color: #111;
+  cursor: pointer;
+  transition: background-position 0.5s ease;
+}
+
+.gaming-btn:hover {
+  background-position: 100% 0;
+}
+
+.watch-btn {
+  position: relative;
+  overflow: hidden;
+  color: var(--main-color);
+  border: var(--main-color) solid 2px;
+  border-radius: 10px;
+  background-color: transparent;
+  cursor: pointer;
+  transition: color 0.4s ease;
+  z-index: 1;
+}
+.watch-btn:hover {
+  color: black;
+  background-color: #c5ff00;
+  color: #000;
+  box-shadow:
+    0 0 10px #c3ff0013,
+    0 0 25px rgba(195, 255, 0, 0.192);
+}
+
+/* Background animation */
+.watch-btn::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-color: #c3ff00a6;
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.4s ease;
+  z-index: -1;
+}
+
+.watch-btn:hover::before {
+  transform: scaleX(1);
+}
+
+.watch-btn:hover {
+  color: #000;
+}
+
+.cup {
+  font-size: 28px;
+}
+
+.badge {
+  background-color: #000;
+  left: -5px;
+  bottom: 125px;
+  color: white;
+  font-size: 16px;
+  border-radius: 10px;
+  text-align: start;
+}
+.Active-Players {
+  color: var(--second-text-color);
+  font-size: 12px;
+  line-height: 18px;
+}
+
+/* header end */
+
+/* navbar start */
+.navbar {
+  font-family: "Chakra Petch", sans-serif;
+}
+.navbar-brand {
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 28px;
+}
+.navbar-brand {
+  color: var(--main-color);
+}
+.navbar a:hover {
+  color: #cbfe1c;
+}
+.nav-link {
+  display: block;
+  padding: 0.5rem 1rem;
+  color: var(--text-color);
+  text-decoration: none;
+  transition:
+    color 0.15s ease-in-out,
+    background-color 0.15s ease-in-out,
+    border-color 0.15s ease-in-out;
+}
+.btn-primary {
+  color: black;
+  background-color: #cbfe1c;
+  border-color: #cbfe1c;
+  border-radius: 15px;
+}
+.navbar-text {
+  color: var(--text-color);
+}
+.navbar-text i:hover {
+  color: var(--main-color) !important;
+}
+.btn-primary:hover {
+  color: black;
+  background-color: #cbfe1c;
+  border-color: #cbfe1c;
+}
+.navbar-toggler {
+  padding: var(--bs-navbar-toggler-padding-y) var(--bs-navbar-toggler-padding-x);
+  font-size: var(--bs-navbar-toggler-font-size);
+  line-height: 1;
+  color: var(--bs-navbar-color);
+  background-color: transparent;
+  border: 0px;
+  border-radius: var(--bs-navbar-toggler-border-radius);
+  transition: var(--bs-navbar-toggler-transition);
+}
+
+.navbar-toggler-icon {
+  display: inline-block;
+  width: 1.5em;
+  height: 1.5em;
+  vertical-align: middle;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 100%;
+}
+.navbar-toggler i:hover {
+  color: var(--main-color) !important;
+}
+/* navbar end */
+
+/* our games start */
+
+.our-games-text h2 {
+  font-family: "Days One", sans-serif;
+  font-weight: 900;
+  font-style: normal;
+  font-size: 60px;
+}
+.line {
+  width: 62px;
+  height: 2px;
+  background: #b8ff00;
+}
+
+.carousel-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  margin-top: 30px;
+}
+
+.carousel-buttons button {
+  width: 46px;
+  height: 46px;
+  border: 1px solid gray;
+  border-radius: 50%;
+  background: transparent;
+  color: var(--second-text-color);
+  font-size: 18px;
+  transition: 0.3s;
+}
+
+.carousel-buttons button:hover {
+  border-color: var(--main-color);
+  color: var(--main-color);
+}
+.btn-dark {
+  width: 200px !important;
+  color: var(--main-color) !important;
+  border-color: var(--main-color) !important;
+  border-radius: 5px !important;
+  padding: 12px !important ;
+  font-family: "Chakra Petch", sans-serif;
+  font-weight: 900;
+}
+.btn-dark:hover {
+  background-color: var(--main-color);
+  color: black !important;
+}
+
+#carouselExample {
+  width: 100%;
+}
+
+#carouselExample .carousel-item > div {
+  width: 100%;
+  justify-content: center;
+}
+
+.game-image {
+  width: 325px;
+  max-width: 28%;
+  height: auto;
+}
+
+.carousel-item :hover img {
+  transform: scale(1.1);
+  border: #c5f500 1px solid;
+  overflow: hidden;
+}
+
+/* our games end  */
+
+/* what we do  start*/
+.first::before {
+  display: inline-block;
+  content: "";
+  width: 100px;
+  height: 2px;
+   background: #2a7b9b;
+  background: linear-gradient(
+    90deg,
+    rgba(237, 221, 83, 0.123) 0%,
+    rgb(87, 199, 134) 50%,
+    rgb(42, 123, 155) 100%
+  );
+}
+.first::after {
+  display: inline-block;
+  content: "";
+
+  width: 100px;
+  height: 2px;
+  background: #2a7b9b;
+  background: linear-gradient(
+    90deg,
+    rgba(42, 123, 155, 1) 0%,
+    rgba(87, 199, 133, 1) 50%,
+    rgba(237, 221, 83, 0.096) 100%
+  );
+}
+
+.playstation {
+  border-radius: 8px;
+  font-size: 40px;
+  background-color: #003552;
+  padding: 5px;
+}
+.element i {
+  color: rgb(197, 255, 0);
+}
+
+.element:hover i {
+  background-color: var(--main-color);
+  color: #000;
+}
+.element {
+  background-color: #021522;
+}
+
+/* Only the cards containing the PlayStation icon */
+#what-we-do .element.icon {
+  position: relative;
+  overflow: hidden;
+  border: 1px solid transparent;
+  border-radius: 16px;
+  transition: border-color 0.35s ease;
+}
+
+/* Both triangles */
+#what-we-do .element.icon::before,
+#what-we-do .element.icon::after {
+  content: "";
+  position: absolute;
+  opacity: 0;
+  transition:
+    opacity 0.3s ease,
+    transform 0.3s ease;
+}
+
+/* Top-left triangle */
+#what-we-do .element.icon::before {
+  top: 16px;
+  left: 16px;
+  border-top: 24px solid #baff00;
+  border-right: 24px solid transparent;
+  transform: translate(-15px, -15px);
+}
+
+/* Bottom-right triangle */
+#what-we-do .element.icon::after {
+  right: 16px;
+  bottom: 16px;
+  border-bottom: 24px solid #baff00;
+  border-left: 24px solid transparent;
+  transform: translate(15px, 15px);
+}
+
+/* Hover effect */
+#what-we-do .element.icon:hover {
+  border-color: #baff00 !important;
+}
+
+#what-we-do .element.icon:hover::before,
+#what-we-do .element.icon:hover::after {
+  opacity: 1;
+  transform: translate(0, 0);
+}
+
+/* what we do end  */
+
+#logos {
+  overflow: hidden;
+}
+.carousel {
+  width: 90%;
+  z-index: 2;
+}
+.track {
+  display: flex;
+  width: max-content;
+  animation: scroll 30s linear infinite;
+}
+
+@keyframes scroll {
+  to {
+    transform: translateX(-50%);
+  }
+}
+.item {
+  flex-shrink: 0;
+  margin-right: 15px;
+  overflow: hidden;
+}
+.item img {
+  width: 70%;
+  object-fit: cover;
+  display: block;
+  border-radius: 15px;
+}
+.carousel[reverse="true"] .track {
+  animation-direction: reverse;
+}
+.circle {
+  z-index: 1;
+  filter: blur(8px);
+  position: absolute;
+  top: 20%;
+  left: 25%;
+  height: 250px;
+  width: 50%;
+  border-radius: 50%;
+  background: radial-gradient(
+    circle,
+    rgba(42, 123, 155, 1) 0%,
+    rgba(87, 199, 133, 1) 50%,
+    rgba(237, 221, 83, 1) 100%
+  );
+}
+
+/* our team start  */
+#our-team h3{
+  font-size: 20px;
+  font-family: "Days One", sans-serif;
+  font-weight: bold;
+}
+#our-team img{
+   filter: grayscale(100%);
+   border-radius: 20px;
+
+
+}
+#our-team img:hover{
+   filter: grayscale(0%);
+   cursor: pointer;
+   
+}
+.phantom-img{
+  position: relative;
+}
+.phantom-details{
+  color: #b8bcc2;
+  position: absolute;
+  bottom:10px;
+  left:35px;
+}
+.phantom{
+  color: gray;
+  position: absolute;
+  right: 0px;
+  bottom: 60px;
+  transform: rotate(90deg);
+  font-size: 24px;
+}
+.team-member-card:hover .phantom {
+  color: #b8ff00;
+}
+.team-member-card:hover p{
+  color: var(--main-color);
+}
+.team-member-card:hover h3{
+  color: white;
+}
+/* our team end  */
+
+/* contact-us start */
+
+
+.contact-heading {
+  margin-bottom: 55px;
+}
+
+.section-title {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  margin-bottom: 16px;
+}
+
+.section-title span {
+  width: 62px;
+  height: 2px;
+  background: linear-gradient(to right, transparent, #baff00);
+}
+
+.section-title span:last-child {
+  background: linear-gradient(to left, transparent, #baff00);
+}
+
+.section-title p {
+  margin: 0;
+  color: #baff00;
+  font-size: 14px;
+  font-weight: 800;
+  letter-spacing: 3px;
+}
+
+.contact-heading h2 {
+  margin: 0;
+  color: #ffffff;
+  font-size: 48px;
+  font-weight: 900;
+}
+
+.contact-heading > p {
+  margin: 16px 0 0;
+  color: #9aa5b6;
+  font-size: 18px;
+}
+
+@media (max-width: 576px) {
+  .contact-heading h2 {
+    font-size: 34px;
+  }
+
+  .contact-heading > p {
+    font-size: 15px;
+  }
+
+  .section-title span {
+    width: 38px;
+  }
+}
+
+
+
+
+.contact-section {
+  background: #0c1423;
+  font-family: Arial, sans-serif;
+}
+
+.contact-card,
+.message-form {
+  background: #1e2b3e;
+  border-radius: 14px;
+}
+
+.contact-card {
+  min-height: 120px;
+  padding: 25px;
+}
+
+.contact-icon {
+  width: 52px;
+  height: 52px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  border-radius: 50%;
+  background: #baff00;
+  color: #07101c;
+  font-size: 20px;
+}
+
+.contact-card h3,
+.community-card h3,
+.message-form h3 {
+  margin: 0;
+  color: #ffffff;
+  font-size: 20px;
+  font-weight: 800;
+}
+
+.contact-card p {
+  margin: 5px 0 0;
+  color: #9aa5b6;
+  font-size: 13px;
+}
+
+.community-card {
+  min-height: 166px;
+  padding: 25px;
+  border-radius: 14px;
+  background: linear-gradient(115deg, #c6ff00, #12d77d);
+}
+
+.community-card h3 {
+  color: #07101c;
+}
+
+.community-card p {
+  margin: 10px 0 0;
+  color: #15251f;
+  font-size: 13px;
+}
+
+.social-link {
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background: #07101c;
+  color: #baff00;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.social-link:hover {
+  transform: translateY(-4px);
+  color: #ffffff;
+}
+
+.message-form {
+  height: 100%;
+  padding: 25px;
+}
+
+.message-form h3 {
+  margin-bottom: 20px;
+}
+
+.form-label {
+  margin-bottom: 7px;
+  color: #e8edf5;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.form-control,
+.form-select {
+  height: 42px;
+  border: 1px solid #506078;
+  border-radius: 6px;
+  background: #38465c;
+  color: #ffffff;
+  font-size: 13px;
+}
+
+.form-control::placeholder {
+  color: #a5afbd;
+}
+
+.form-control:focus,
+.form-select:focus {
+  border-color: #baff00;
+  background: #38465c;
+  color: #ffffff;
+  box-shadow: none;
+}
+
+textarea.form-control {
+  height: 117px;
+  padding-top: 12px;
+  resize: vertical;
+}
+
+.form-check-input {
+  border-radius: 0;
+}
+
+.form-check-input:checked {
+  background-color: #baff00;
+  border-color: #baff00;
+}
+
+.form-check-label {
+  color: #9aa5b6;
+  font-size: 11px;
+}
+
+.send-button {
+  height: 48px;
+  border: none;
+  border-radius: 7px;
+  background: #baff00;
+  color: #07101c;
+  font-size: 14px;
+  font-weight: 800;
+}
+
+.send-button:hover {
+  background: #d4ff36;
+  color: #07101c;
+}
+
+.border-top {
+  border-color: #3a485d !important;
+}
+
+.message-form h4 {
+  margin: 0;
+  color: #baff00;
+  font-size: 20px;
+  font-weight: 800;
+}
+
+.message-form .row p {
+  margin: 5px 0 0;
+  color: #9aa5b6;
+  font-size: 11px;
+}
+
+
+
+/* contact-us end */
+
+
+.footer-section {
+  padding: 75px 0 25px;
+  background: #09111e;
+  border-top: 1px solid #263448;
+  font-family: Arial, sans-serif;
+}
+
+.footer-logo {
+  color: #ffffff;
+  font-size: 27px;
+  font-weight: 800;
+  text-decoration: none;
+}
+
+.footer-logo span {
+  color: #baff00;
+}
+
+.footer-description {
+  max-width: 310px;
+  margin: 18px 0 24px;
+  color: #9aa5b6;
+  font-size: 14px;
+  line-height: 1.8;
+}
+
+.footer-social a {
+  width: 38px;
+  height: 38px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid #34445a;
+  border-radius: 50%;
+  color: #baff00;
+  font-size: 15px;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.footer-social a:hover {
+  border-color: #baff00;
+  background: #baff00;
+  color: #09111e;
+  transform: translateY(-3px);
+}
+
+.footer-section h4 {
+  margin-bottom: 22px;
+  color: #ffffff;
+  font-size: 17px;
+  font-weight: 700;
+}
+
+.footer-links li {
+  margin-bottom: 13px;
+}
+
+.footer-links a,
+.footer-policy a {
+  color: #9aa5b6;
+  font-size: 13px;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.footer-links a:hover,
+.footer-policy a:hover {
+  color: #baff00;
+}
+
+.footer-bottom {
+  margin-top: 60px;
+  padding-top: 23px;
+  border-top: 1px solid #263448;
+}
+
+.footer-bottom p {
+  margin: 0;
+  color: #7f8a9d;
+  font-size: 13px;
+}
+
